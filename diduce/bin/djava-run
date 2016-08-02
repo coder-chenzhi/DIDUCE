@@ -1,0 +1,90 @@
+#! /bin/sh
+
+Usage() {
+    echo "Usage: djava-run [options] prog-name prog-args"
+    echo "options are:"
+    echo "   -jvmargs args   Pass args to JVM"
+    echo "   -help           Display this message"
+    exit 0;
+}
+
+if [ $# -lt 1 ]; then
+	Usage
+fi
+
+# Find diduce home
+
+## resolve links - $0 may be a link to diduce home
+PRG=$0
+progname=`basename $0`
+saveddir=`pwd`
+
+# need this for relative symlinks
+dirname_prj=`dirname "$PRG"`
+cd "$dirname_prj"
+
+while [ -h "$PRG" ] ; do
+    ls=`ls -ld "$PRG"`
+    link=`expr "$ls" : '.*-> \(.*\)$'`
+    if expr "$link" : '/.*' > /dev/null; then
+        PRG="$link"
+    else
+        PRG=`dirname "$PRG"`"/$link"
+    fi
+done
+
+if [ -z "$JAVA_HOME" ]; then
+    echo "Please set JAVA_HOME to the location of the J2SE installation to use"
+    exit 0
+fi
+
+
+diduce_home=`dirname "$PRG"`/..
+
+cd "$saveddir"
+
+# make it fully qualified
+diduce_home=`cd "$diduce_home" && pwd`
+
+if [ ! -s $diduce_home/classes/diduce.jar ]; then
+    echo "Requires diduce.jar in:" $diduce_home/classes "directory"
+    exit 0
+fi
+
+if [ ! -s $diduce_home/classes/BCEL.jar ]; then
+    echo "Requires BCEL.jar in:" $diduce_home/classes "directory"
+    exit 0
+fi
+
+
+# get the program args for the program run using diduce
+
+argList=""
+
+while [ $# -gt 0 ]; do
+    arg=$1
+    shift
+
+    case $arg in
+    -jvmargs)
+ 	jvmArgs=$1
+	shift
+	;;
+    
+    -help)
+	Usage
+	;;
+    *)
+    argList="$argList $arg"
+    ;;
+    esac
+done
+
+# lets use a tmp file now
+invfile="program.inv"
+
+cp=$saveddir/diduce-cache.jar:$diduce_home/classes/diduce.jar:$diduce_home/BCEL.jar:$CLASSPATH
+
+javacmd=$JAVA_HOME/bin/java
+
+$javacmd $jvmargs -classpath $cp diduce.run -i $invfile -r -g $argList

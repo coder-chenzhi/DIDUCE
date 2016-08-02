@@ -1,0 +1,11 @@
+type=integer diduce.IntValInvariant 
+type=integer-write=true diduce.IntValInvariant diduce.IntDiffInvariant 
+type=integer-static=true diduce.IntValInvariant 
+type=integer-static=true-write=true diduce.IntValInvariant diduce.IntDiffInvariant 
+#
+type=long diduce.LongValInvariant diduce.BaseRefInvariant
+type=long-write=true diduce.LongValInvariant diduce.LongDiffInvariant 
+type=long-static=true diduce.LongValInvariant 
+type=long-static=true-write=true diduce.LongValInvariant diduce.LongDiffInvariant
+#
+type=object 

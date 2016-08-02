@@ -1,0 +1,14 @@
+type=integer diduce.invariants.IntValInvariant diduce.invariants.BaseTypeInvariant
+type=integer-write=true diduce.invariants.IntValInvariant diduce.invariants.IntDiffInvariant diduce.invariants.BaseTypeInvariant
+type=integer-static=true diduce.invariants.IntValInvariant 
+type=integer-static=true-write=true diduce.invariants.IntValInvariant diduce.invariants.IntDiffInvariant 
+#
+type=long diduce.invariants.LongValInvariant diduce.invariants.BaseTypeInvariant
+type=long-write=true diduce.invariants.LongValInvariant diduce.invariants.LongDiffInvariant diduce.invariants.BaseTypeInvariant
+type=long-static=true diduce.invariants.LongValInvariant 
+type=long-static=true-write=true diduce.invariants.LongValInvariant diduce.invariants.LongDiffInvariant
+#
+type=object diduce.invariants.TypeInvariant diduce.invariants.BaseTypeInvariant
+type=object-write=true diduce.invariants.TypeInvariant diduce.invariants.TypeDiffInvariant diduce.invariants.BaseTypeInvariant
+type=object-static=true diduce.invariants.TypeInvariant
+type=object-static=true-write=true diduce.invariants.TypeInvariant diduce.invariants.TypeDiffInvariant diduce.invariants.BaseTypeInvariant

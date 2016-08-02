@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ControlInfo>
+    <DoNotWatch>
+        <Method name="Methods.baz"
+		params="int, int, int"
+		returns="void">
+	</Method>
+    </DoNotWatch>
+</ControlInfo>

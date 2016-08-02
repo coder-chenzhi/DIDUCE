@@ -1,0 +1,6 @@
+diduce invariants are all in package diduce.* 
+(not diduce.invariants.*) even though they are 
+under the subdir invariants. This is to make it 
+more convenient for users to specify invariant 
+names, but keep the invariant source files 
+grouped together separately.

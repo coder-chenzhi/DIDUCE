@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ControlInfo>
+    <DoNotWatch> <ProgramPoint num = "1">
+	<Target>
+	    <Method name="params.p_virtual"> </Method>
+	</Target>
+    </ProgramPoint> </DoNotWatch>
+    <DoNotWatch>
+	<ProgramPoint op = "retval">
+	     <Target>
+	        <Method name="params.p_virtual"> </Method>
+	     </Target>
+	     <Method name = "params.main"> </Method>
+	</ProgramPoint>
+    </DoNotWatch>
+    <Equivalent>
+        <Watch> <ProgramPoint line="39"> </ProgramPoint> </Watch>
+        <Watch <ProgramPoint line="40"> </ProgramPoint> </Watch>
+    </Equivalent>
+</ControlInfo>

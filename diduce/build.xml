@@ -1,0 +1,19 @@
+<project name="iodine" default="all" basedir=".">
+
+    <target name="init">
+	<property name="srcDir" location="${basedir}/src" />
+	<property name="classesDir" location="${basedir}/classes" />
+	<property name="debug" value="Yes" />
+    </target>
+
+    <target name="clean" depends="init">
+	<deltree dir="${classesDir}/diduce" />
+    </target>
+
+    <target name="all" depends="init">
+	<javac srcdir="${srcDir}" destdir="${classesDir}" debug="${debug}" excludes="diduce/netbeans/**"/>
+		<jar manifest="${classesDir}/diduce/MANIFEST.MF" jarfile="${classesDir}/diduce.jar" basedir="${classesDir}"
+            excludes="**.jar"/>
+    </target>
+
+</project>

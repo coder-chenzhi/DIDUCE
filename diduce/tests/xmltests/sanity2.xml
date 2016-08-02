@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ControlInfo>
+    <DoNotWatch>
+	<ProgramPoint> <Target field="Sanity.z"> </Target> </ProgramPoint>
+    </DoNotWatch>
+    <DoNotWatch>
+	<ProgramPoint> <Target field="Sanity.b"> </Target> </ProgramPoint>
+    </DoNotWatch>
+    <DoNotWatch>
+	 <ProgramPoint> <Target field="Sanity.s"> </Target> </ProgramPoint>
+    </DoNotWatch>
+    <Watch> <ProgramPoint type="boolean"> </ProgramPoint> </Watch>
+</ControlInfo>

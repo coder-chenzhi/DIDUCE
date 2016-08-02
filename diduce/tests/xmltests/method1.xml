@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ControlInfo>
+    <DoNotWatch>
+        <ProgramPoint>
+            <Method name="Methods.bar"
+		params="java.lang.Object[]"
+		returns="void">
+	    </Method>
+	</ProgramPoint>
+    </DoNotWatch>
+</ControlInfo>

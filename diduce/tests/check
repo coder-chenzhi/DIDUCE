@@ -1,0 +1,5 @@
+#!/bin/csh -f
+setenv CLASSPATH diduce-classes.jar:$CLASSPATH
+echo $CLASSPATH is $CLASSPATH
+java -Ddiduce.print.inv -Ddiduce.check=1 -Ddiduce.verbose=1 diduce.run $*
+

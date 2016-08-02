@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ControlInfo>
+    <DoNotWatch>
+	<ProgramPoint>
+	    <Target>
+                <Method name="Sanity.foo"
+		    params="int"
+		    returns="void">
+	        </Method>
+	    </Target>
+	</ProgramPoint>
+    </DoNotWatch>
+</ControlInfo>

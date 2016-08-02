@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ControlInfo>
+    <DoNotWatch>
+	<ProgramPoint>
+            <Method returns="java.lang.Object">
+	    </Method>
+	</ProgramPoint>
+    </DoNotWatch>
+</ControlInfo>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ControlInfo>
+    <Invariant>
+	<diduce.IntValInvariant>
+	</diduce.IntValInvariant>
+	<ProgramPoint
+	      type="int|byte|short|char|boolean"
+	      write="false"> 
+       </ProgramPoint>
+    </Invariant>
+</ControlInfo>

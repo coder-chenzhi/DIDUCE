@@ -1,0 +1,5 @@
+OpenIDE-Module: diduce.netbeans.watch/1
+OpenIDE-Module-Layer: diduce/mf-layer.xml
+OpenIDE-Module-Name: DIDUCE Instrument
+OpenIDE-Module-Specification-Version: 0.1.0
+Class-Path: ext/BCEL.jar
